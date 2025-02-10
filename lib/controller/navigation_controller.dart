@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:garments_niyog/pages/overtime_page.dart';
 import 'package:garments_niyog/pages/profile_page.dart';
 import 'package:garments_niyog/pages/setting_page.dart';
 import 'package:get/get.dart';
@@ -22,7 +23,7 @@ class NavigationController extends GetxController {
       case 2:
         return SettingPage();
       case 3:
-        return Container();
+        return OvertimePage();
       default:
         return Center(child: Text('page 3'));
     }
