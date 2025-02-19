@@ -396,12 +396,12 @@ class HomePage extends StatelessWidget {
                 child: ListView.builder(
                   physics: BouncingScrollPhysics(), // Changed physics
                   scrollDirection: Axis.horizontal,
-                  itemCount: 5,
+                  itemCount: 7,
                   itemBuilder: (BuildContext context, int index) {
                     return Container(
                       margin:
-                          EdgeInsets.symmetric(horizontal: 10), // Added margin
-                      width: 150.0, // Set a finite width
+                          EdgeInsets.symmetric(horizontal: 5), // Added margin
+                      width: 90.0, // Set a finite width
                       height: 80,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
@@ -415,10 +415,10 @@ class HomePage extends StatelessWidget {
                               child: InkWell(
                                 onTap: () {},
                                 child: Container(
-                                  height: 100,
+                                  height: 90,
                                   decoration: BoxDecoration(
-                                    color: hexToColor('#D3F2CA'),
-                                    borderRadius: BorderRadius.circular(8),
+                                    color: hexToColor('#CDEEFB'),
+                                    borderRadius: BorderRadius.circular(6),
                                   ),
                                   child: Column(
                                     crossAxisAlignment:
@@ -431,16 +431,16 @@ class HomePage extends StatelessWidget {
                                         child: CircleAvatar(
                                           backgroundColor: Colors.white,
                                           radius: 15,
-                                          child: Icon(Icons.abc),
+                                          child: Image.asset(
+                                              'assets/icon/job.png'),
                                         ),
                                       ),
                                       Text(
-                                        '2455K',
+                                        'Production \nSupervisor',
                                         style: TextStyle(
-                                            fontSize: 18,
+                                            fontSize: 14,
                                             fontWeight: FontWeight.bold),
                                       ),
-                                      Text('data'),
                                     ],
                                   ),
                                 ),
@@ -453,7 +453,7 @@ class HomePage extends StatelessWidget {
                   },
                 ),
               ),
-              SizedBox(height: 10),
+              // SizedBox(height: 10),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: Row(
@@ -463,9 +463,9 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
-                height: 10,
-              ),
+              // SizedBox(
+              //   height: 10,
+              // ),
               ListView.builder(
                 physics: BouncingScrollPhysics(), // Changed physics
                 scrollDirection: Axis.vertical,
@@ -477,7 +477,7 @@ class HomePage extends StatelessWidget {
                     margin:
                         EdgeInsets.symmetric(horizontal: 10), // Added margin
                     width: Get.width,
-                    height: 200,
+                    height: 150,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                     ),
@@ -494,19 +494,23 @@ class HomePage extends StatelessWidget {
                           child: Column(
                             children: [
                               Padding(
-                                padding: const EdgeInsets.all(16.0),
+                                padding: const EdgeInsets.all(10.0),
                                 child: Row(
                                   crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  spacing: 10,
                                   children: [
-                                    Container(
-                                      height: 80,
-                                      width: 80,
-                                      decoration: BoxDecoration(
-                                        color: Colors.white,
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      width: 10,
+                                    Column(
+                                      children: [
+                                        Container(
+                                          height: 80,
+                                          width: 80,
+                                          decoration: BoxDecoration(
+                                            color: Colors.white,
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                     Column(
                                       crossAxisAlignment:
@@ -529,15 +533,37 @@ class HomePage extends StatelessWidget {
                                         ),
                                       ],
                                     ),
-
-                                    // Icon(Icons.people),
-                                    // Text('data'),
+                                    Column(
+                                      children: [
+                                        ElevatedButton(
+                                          onPressed: () {
+                                            push(JobDetailsPage());
+                                          },
+                                          style: ElevatedButton.styleFrom(
+                                            minimumSize: Size.zero,
+                                            // padding: EdgeInsets.zero,
+                                            padding: EdgeInsets.symmetric(
+                                                horizontal: 15, vertical: 2),
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(2),
+                                            ),
+                                            backgroundColor: Colors.white,
+                                          ),
+                                          child: Text(
+                                            'Apply Now',
+                                            style:
+                                                TextStyle(color: Colors.black),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
                                   ],
                                 ),
                               ),
                               Padding(
                                 padding:
-                                    const EdgeInsets.symmetric(horizontal: 16),
+                                    const EdgeInsets.symmetric(horizontal: 10),
                                 child: Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
@@ -581,34 +607,6 @@ class HomePage extends StatelessWidget {
                                       ),
                                       child: Center(
                                         child: Text('Vacancy'),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(right: 16),
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.end,
-                                  children: [
-                                    ElevatedButton(
-                                      onPressed: () {
-                                        push(JobDetailsPage());
-                                      },
-                                      style: ElevatedButton.styleFrom(
-                                        minimumSize: Size.zero,
-                                        // padding: EdgeInsets.zero,
-                                        padding: EdgeInsets.symmetric(
-                                            horizontal: 15, vertical: 2),
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(2),
-                                        ),
-                                        backgroundColor: Colors.white,
-                                      ),
-                                      child: Text(
-                                        'Apply Now',
-                                        style: TextStyle(color: Colors.black),
                                       ),
                                     ),
                                   ],
