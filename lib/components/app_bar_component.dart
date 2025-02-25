@@ -61,7 +61,7 @@ class AppBarComponent extends StatelessWidget
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Shariar Nahid',
+                  'Shariar Nahid ',
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
