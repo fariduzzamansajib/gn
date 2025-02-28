@@ -82,13 +82,49 @@ class _ProfilePageState extends State<ProfilePage> {
                           border: OutlineInputBorder(),
                         ),
                       ),
+                      TextFormField(
+                        decoration: InputDecoration(
+                          label: Text('আপনার ইমেইল'),
+                          border: OutlineInputBorder(),
+                        ),
+                      ),
+                      TextFormField(
+                        decoration: InputDecoration(
+                          label: Text('ফোন নাম্বার'),
+                          border: OutlineInputBorder(),
+                        ),
+                      ),
+                      TextFormField(
+                        decoration: InputDecoration(
+                          label: Text('বাবার নাম বাংলায় লিখুন'),
+                          border: OutlineInputBorder(),
+                        ),
+                      ),
+                      TextFormField(
+                        decoration: InputDecoration(
+                          label: Text('বাবার নাম ইরেজিতে লিখুন'),
+                          border: OutlineInputBorder(),
+                        ),
+                      ),
+                      TextFormField(
+                        decoration: InputDecoration(
+                          label: Text('মায়ের নাম ইরেজিতে লিখুন'),
+                          border: OutlineInputBorder(),
+                        ),
+                      ),
+                      TextFormField(
+                        decoration: InputDecoration(
+                          label: Text('মায়ের নাম ইরেজিতে লিখুন'),
+                          border: OutlineInputBorder(),
+                        ),
+                      ),
                       Row(
                         spacing: 20,
                         children: [
                           Expanded(
                             child: TextFormField(
                               decoration: InputDecoration(
-                                label: Text('Enter your Name'),
+                                label: Text('জাতীয়তা বাংলায়'),
                                 border: OutlineInputBorder(),
                               ),
                             ),
@@ -96,18 +132,75 @@ class _ProfilePageState extends State<ProfilePage> {
                           Expanded(
                             child: TextFormField(
                               decoration: InputDecoration(
-                                label: Text('Enter your Name'),
+                                label: Text('জাতীয়তা ইরেজিতে'),
                                 border: OutlineInputBorder(),
                               ),
                             ),
                           ),
                         ],
                       ),
-                      TextFormField(
-                        decoration: InputDecoration(
-                          label: Text('Enter your Name'),
-                          border: OutlineInputBorder(),
-                        ),
+                      Row(
+                        spacing: 20,
+                        children: [
+                          Expanded(
+                            child: TextFormField(
+                              decoration: InputDecoration(
+                                label: Text('রক্তের গ্রুপ বাংলায়'),
+                                border: OutlineInputBorder(),
+                              ),
+                            ),
+                          ),
+                          Expanded(
+                            child: TextFormField(
+                              decoration: InputDecoration(
+                                label: Text('রক্তের গ্রুপ ইরেজিতে'),
+                                border: OutlineInputBorder(),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        spacing: 20,
+                        children: [
+                          Expanded(
+                            child: TextFormField(
+                              decoration: InputDecoration(
+                                label: Text('NID নাম্বার'),
+                                border: OutlineInputBorder(),
+                              ),
+                            ),
+                          ),
+                          Expanded(
+                            child: TextFormField(
+                              decoration: InputDecoration(
+                                label: Text('জন্ম তারিখ'),
+                                border: OutlineInputBorder(),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        spacing: 20,
+                        children: [
+                          Expanded(
+                            child: TextFormField(
+                              decoration: InputDecoration(
+                                label: Text('সিভি'),
+                                border: OutlineInputBorder(),
+                              ),
+                            ),
+                          ),
+                          Expanded(
+                            child: TextFormField(
+                              decoration: InputDecoration(
+                                label: Text('প্রোফাইল পিকচার'),
+                                border: OutlineInputBorder(),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                       Row(
                         spacing: 10,
@@ -169,7 +262,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 ), // Removes border when expanded
               ),
               trailing: Icon(Icons.edit),
-              title: Text("ব্যক্তিওগত তথ্য"),
+              title: Text("শিক্ষাগত তথ্য"),
               children: [
                 Padding(
                   padding: const EdgeInsets.all(10.0),
@@ -266,7 +359,104 @@ class _ProfilePageState extends State<ProfilePage> {
                 ), // Removes border when expanded
               ),
               trailing: Icon(Icons.edit),
-              title: Text("শিক্ষাগত যোগ্যতা "),
+              title: Text(" অভিজ্ঞতা "),
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Column(
+                    spacing: 20,
+                    children: [
+                      TextFormField(
+                        decoration: InputDecoration(
+                          label: Text('আপনার নাম ইংরেজিতে লিখুন'),
+                          border: OutlineInputBorder(),
+                        ),
+                      ),
+                      TextFormField(
+                        decoration: InputDecoration(
+                          label: Text('আপনার নাম বাংলায় লিখুন'),
+                          border: OutlineInputBorder(),
+                        ),
+                      ),
+                      TextFormField(
+                        decoration: InputDecoration(
+                          label: Text('Enter your Name'),
+                          border: OutlineInputBorder(),
+                        ),
+                      ),
+                      TextFormField(
+                        decoration: InputDecoration(
+                          label: Text('Enter your Name'),
+                          border: OutlineInputBorder(),
+                        ),
+                      ),
+                      TextFormField(
+                        decoration: InputDecoration(
+                          label: Text('Enter your Name'),
+                          border: OutlineInputBorder(),
+                        ),
+                      ),
+                      Row(
+                        spacing: 10,
+                        children: [
+                          Expanded(
+                            child: ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor:
+                                    Colors.blue, // Change background color
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(
+                                      5), // Change border radius
+                                ),
+                              ),
+                              child: Text(
+                                'Save',
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            ),
+                          ),
+                          Expanded(
+                            child: ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor:
+                                    Colors.blue, // Change background color
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(
+                                      5), // Change border radius
+                                ),
+                              ),
+                              child: Text(
+                                'Back',
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            ExpansionTile(
+              collapsedShape: RoundedRectangleBorder(
+                side: BorderSide(
+                  width: 1,
+                  color: Colors.blue,
+                ), // Adds border in collapsed state
+                borderRadius: BorderRadius.circular(5),
+              ),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(5),
+                side: BorderSide(
+                  width: 1,
+                  color: Colors.blue,
+                ), // Removes border when expanded
+              ),
+              trailing: Icon(Icons.edit),
+              title: Text(" দক্ষতা "),
               children: [
                 Padding(
                   padding: const EdgeInsets.all(10.0),

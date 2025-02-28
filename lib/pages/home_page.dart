@@ -499,12 +499,12 @@ class HomePage extends StatelessWidget {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
-                                  spacing: 10,
+                                  spacing: 5,
                                   children: [
                                     Column(
                                       children: [
                                         Container(
-                                          height: 80,
+                                          height: 75,
                                           width: 80,
                                           decoration: BoxDecoration(
                                             color: Colors.white,
@@ -519,7 +519,7 @@ class HomePage extends StatelessWidget {
                                         Text(
                                           'Textile Engineer',
                                           style: TextStyle(
-                                              fontSize: 20,
+                                              fontSize: 16,
                                               fontWeight: FontWeight.bold),
                                         ),
                                         Text(
@@ -528,9 +528,9 @@ class HomePage extends StatelessWidget {
                                             fontSize: 14,
                                           ),
                                         ),
-                                        SizedBox(
-                                          height: 10,
-                                        ),
+                                        // SizedBox(
+                                        //   height: 6,
+                                        // ),
                                       ],
                                     ),
                                     Column(
@@ -543,7 +543,7 @@ class HomePage extends StatelessWidget {
                                             minimumSize: Size.zero,
                                             // padding: EdgeInsets.zero,
                                             padding: EdgeInsets.symmetric(
-                                                horizontal: 15, vertical: 2),
+                                                horizontal: 7, vertical: 3),
                                             shape: RoundedRectangleBorder(
                                               borderRadius:
                                                   BorderRadius.circular(2),
