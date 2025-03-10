@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../helpers/hex_color.dart';
 
@@ -537,27 +538,37 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
               ],
             ),
-            // Card(
-            //   color: hexToColor('#E9F5F8'),
-
-            //   elevation: 4, // Shadow effect
-            //   shape: RoundedRectangleBorder(
-            //     borderRadius: BorderRadius.circular(6), // Rounded corners
-            //   ),
-            //   child: Padding(
-            //     padding: const EdgeInsets.all(10.0),
-            //     child: Container(
-            //       width: Get.width,
-            //       child: Column(
-            //         crossAxisAlignment: CrossAxisAlignment.start,
-            //         mainAxisSize: MainAxisSize.min,
-            //         children: [
-            //           Text('data'),
-            //         ],
-            //       ),
-            //     ),
-            //   ),
-            // )
+            SizedBox(
+              height: 15,
+            ),
+            Row(
+              spacing: 15,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Expanded(
+                  child: Column(
+                    children: [
+                      Container(
+                        height: 60,
+                        width: Get.width,
+                        decoration: BoxDecoration(color: Colors.blue),
+                      ),
+                    ],
+                  ),
+                ),
+                Expanded(
+                  child: Column(
+                    children: [
+                      Container(
+                        height: 60,
+                        width: Get.width,
+                        decoration: BoxDecoration(color: Colors.pinkAccent),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
