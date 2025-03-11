@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 import '../helpers/hex_color.dart';
 
@@ -549,9 +548,21 @@ class _ProfilePageState extends State<ProfilePage> {
                   child: Column(
                     children: [
                       Container(
-                        height: 60,
-                        width: Get.width,
-                        decoration: BoxDecoration(color: Colors.blue),
+                        height: 75,
+                        decoration: BoxDecoration(
+                          color: hexToColor('#CDEEFB'),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 10),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text('English Cv'),
+                              Icon(Icons.note),
+                            ],
+                          ),
+                        ),
                       ),
                     ],
                   ),
@@ -560,9 +571,21 @@ class _ProfilePageState extends State<ProfilePage> {
                   child: Column(
                     children: [
                       Container(
-                        height: 60,
-                        width: Get.width,
-                        decoration: BoxDecoration(color: Colors.pinkAccent),
+                        height: 75,
+                        decoration: BoxDecoration(
+                          color: hexToColor('#D3F2CA'),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 10),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text('Bangla Cv'),
+                              Icon(Icons.note),
+                            ],
+                          ),
+                        ),
                       ),
                     ],
                   ),
