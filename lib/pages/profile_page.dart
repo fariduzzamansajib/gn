@@ -412,7 +412,9 @@ class _ProfilePageState extends State<ProfilePage> {
                               ),
                               child: Text(
                                 'Save',
-                                style: TextStyle(color: Colors.white),
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
                               ),
                             ),
                           ),
@@ -537,8 +539,106 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
               ],
             ),
+            ExpansionTile(
+              collapsedShape: RoundedRectangleBorder(
+                side: BorderSide(
+                  width: 1,
+                  color: Colors.blue,
+                ), // Adds border in collapsed state
+                borderRadius: BorderRadius.circular(5),
+              ),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(5),
+                side: BorderSide(
+                  width: 1,
+                  color: Colors.blue,
+                ), // Removes border when expanded
+              ),
+              trailing: Icon(Icons.edit),
+              title: Text(" রেফারেন্স "),
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Column(
+                    spacing: 20,
+                    children: [
+                      TextFormField(
+                        decoration: InputDecoration(
+                          label: Text('আপনার নাম ইংরেজিতে লিখুন'),
+                          border: OutlineInputBorder(),
+                        ),
+                      ),
+                      TextFormField(
+                        decoration: InputDecoration(
+                          label: Text('আপনার নাম বাংলায় লিখুন'),
+                          border: OutlineInputBorder(),
+                        ),
+                      ),
+                      TextFormField(
+                        decoration: InputDecoration(
+                          label: Text('Enter your Name'),
+                          border: OutlineInputBorder(),
+                        ),
+                      ),
+                      TextFormField(
+                        decoration: InputDecoration(
+                          label: Text('Enter your Name'),
+                          border: OutlineInputBorder(),
+                        ),
+                      ),
+                      TextFormField(
+                        decoration: InputDecoration(
+                          label: Text('Enter your Name'),
+                          border: OutlineInputBorder(),
+                        ),
+                      ),
+                      Row(
+                        spacing: 10,
+                        children: [
+                          Expanded(
+                            child: ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor:
+                                    Colors.blue, // Change background color
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(
+                                      5), // Change border radius
+                                ),
+                              ),
+                              child: Text(
+                                'Save',
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            ),
+                          ),
+                          Expanded(
+                            child: ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor:
+                                    Colors.blue, // Change background color
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(
+                                      5), // Change border radius
+                                ),
+                              ),
+                              child: Text(
+                                'Back',
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
             SizedBox(
               height: 15,
+              child: Text('আপনার সিভি ডাউনলোড করুন'),
             ),
             Row(
               spacing: 15,
@@ -558,8 +658,8 @@ class _ProfilePageState extends State<ProfilePage> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text('English Cv'),
-                              Icon(Icons.note),
+                              Text(' ইংরেজি সিভি'),
+                              Icon(Icons.pan_tool),
                             ],
                           ),
                         ),
@@ -581,7 +681,7 @@ class _ProfilePageState extends State<ProfilePage> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text('Bangla Cv'),
+                              Text('বাংলা সিভি'),
                               Icon(Icons.note),
                             ],
                           ),
