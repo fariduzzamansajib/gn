@@ -28,8 +28,8 @@ class BottomNavigationComponent extends StatelessWidget {
             label: 'Profile',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person_rounded),
-            label: 'Setting',
+            icon: Icon(Icons.video_collection),
+            label: 'Training',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person_rounded),
