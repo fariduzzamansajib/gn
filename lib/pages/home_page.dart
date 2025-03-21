@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:garments_niyog/helpers/route.dart';
 import 'package:garments_niyog/pages/job_search_page.dart';
+import 'package:garments_niyog/pages/login_page.dart';
 import 'package:get/get.dart';
 
 import '../components/text_field_input.dart';
@@ -190,37 +191,42 @@ class HomePage extends StatelessWidget {
                             ),
                           ),
                           Expanded(
-                            child: Container(
-                              height: 100,
-                              decoration: BoxDecoration(
-                                color: hexToColor('#D3F2CA'),
-                                borderRadius: BorderRadius.circular(8),
-                                // border: Border.all(
-                                //   color: Colors.white, // Border color
-                                //   width: 4, // Border width
-                                // ),
-                              ),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  CircleAvatar(
-                                    backgroundColor: Colors.amber,
-                                    radius: 17,
-                                    child: CircleAvatar(
-                                      backgroundColor: Colors.white,
-                                      radius: 15,
-                                      child: Icon(Icons.abc),
+                            child: InkWell(
+                              onTap: () {
+                                push(LoginPage());
+                              },
+                              child: Container(
+                                height: 100,
+                                decoration: BoxDecoration(
+                                  color: hexToColor('#D3F2CA'),
+                                  borderRadius: BorderRadius.circular(8),
+                                  // border: Border.all(
+                                  //   color: Colors.white, // Border color
+                                  //   width: 4, // Border width
+                                  // ),
+                                ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    CircleAvatar(
+                                      backgroundColor: Colors.amber,
+                                      radius: 17,
+                                      child: CircleAvatar(
+                                        backgroundColor: Colors.white,
+                                        radius: 15,
+                                        child: Icon(Icons.abc),
+                                      ),
                                     ),
-                                  ),
-                                  Text(
-                                    'Job Location',
-                                    style: TextStyle(
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  // Text('data'),
-                                ],
+                                    Text(
+                                      'Job Location',
+                                      style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    // Text('data'),
+                                  ],
+                                ),
                               ),
                             ),
                           ),

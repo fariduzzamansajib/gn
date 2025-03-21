@@ -13,6 +13,7 @@ class JobSearchPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.white,
         title: Text(
           'Search Job ',
           style: TextStyle(fontSize: 18),
