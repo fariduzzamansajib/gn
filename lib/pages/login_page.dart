@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:garments_niyog/helpers/hex_color.dart';
 
 class LoginPage extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
@@ -82,31 +83,93 @@ class LoginPage extends StatelessWidget {
                             }
                           },
                           style: ElevatedButton.styleFrom(
-                            elevation: 0,
-                            backgroundColor: Color(0xFF00BF6D),
-                            foregroundColor: Colors.white,
-                            minimumSize: Size(double.infinity, 48),
-                            shape: StadiumBorder(),
-                          ),
+                              elevation: 0,
+                              backgroundColor: hexToColor('#33A0DA'),
+                              foregroundColor: Colors.white,
+                              minimumSize: Size(double.infinity, 48),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8),
+                              )),
                           child: Text("Sign in"),
                         ),
                         SizedBox(height: 16.0),
-                        TextButton(
-                          onPressed: () {},
-                          child: Text(
-                            'Forgot Password?',
-                            style: Theme.of(context)
-                                .textTheme
-                                .bodyMedium!
-                                .copyWith(
-                                  color: Theme.of(context)
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Expanded(
+                              child: TextButton(
+                                onPressed: () {},
+                                child: Text(
+                                  'Login With',
+                                  style: Theme.of(context)
                                       .textTheme
-                                      .bodyLarge!
-                                      .color!
-                                      .withOpacity(0.64),
+                                      .bodyMedium!
+                                      .copyWith(
+                                        color: Theme.of(context)
+                                            .textTheme
+                                            .bodyLarge!
+                                            .color!
+                                            .withOpacity(0.64),
+                                      ),
                                 ),
-                          ),
+                              ),
+                            ),
+                            Expanded(
+                              child: TextButton(
+                                onPressed: () {},
+                                child: Text(
+                                  'Forgot Password?',
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .bodyMedium!
+                                      .copyWith(
+                                        color: Theme.of(context)
+                                            .textTheme
+                                            .bodyLarge!
+                                            .color!
+                                            .withOpacity(0.64),
+                                      ),
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
+                        SizedBox(
+                          height: 15,
+                        ),
+                        Row(
+                          spacing: 15,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            CircleAvatar(
+                              radius: 25,
+                              backgroundColor:
+                                  const Color.fromARGB(255, 212, 211, 211),
+                              child: Icon(
+                                Icons.facebook,
+                                size: 50,
+                              ),
+                            ),
+                            CircleAvatar(
+                              radius: 25,
+                              backgroundColor: Colors.grey,
+                              child: Icon(
+                                Icons.face,
+                                size: 50,
+                              ),
+                            ),
+                            CircleAvatar(
+                              radius: 25,
+                              backgroundColor: Colors.grey,
+                              child: Icon(
+                                Icons.face,
+                                size: 50,
+                              ),
+                            ),
+                          ],
+                        ),
+
                         TextButton(
                           onPressed: () {},
                           child: Text.rich(
@@ -115,7 +178,10 @@ class LoginPage extends StatelessWidget {
                               children: [
                                 TextSpan(
                                   text: "Sign Up",
-                                  style: TextStyle(color: Color(0xFF00BF6D)),
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    color: hexToColor('#33A0DA'),
+                                  ),
                                 ),
                               ],
                             ),
@@ -131,6 +197,31 @@ class LoginPage extends StatelessWidget {
                                 ),
                           ),
                         ),
+
+                        // TextButton(
+                        //   onPressed: () {},
+                        //   child: Text.rich(
+                        //     TextSpan(
+                        //       text: "Don’t have an account? ",
+                        //       children: [
+                        //         TextSpan(
+                        //           text: "Sign Up",
+                        //           style: TextStyle(color: Color(0xFF00BF6D)),
+                        //         ),
+                        //       ],
+                        //     ),
+                        //     style: Theme.of(context)
+                        //         .textTheme
+                        //         .bodyMedium!
+                        //         .copyWith(
+                        //           color: Theme.of(context)
+                        //               .textTheme
+                        //               .bodyLarge!
+                        //               .color!
+                        //               .withOpacity(0.64),
+                        //         ),
+                        //   ),
+                        // ),
                       ],
                     ),
                   ),
