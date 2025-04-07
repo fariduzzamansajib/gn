@@ -38,7 +38,7 @@ class JobSearchPage extends StatelessWidget {
                 children: [
                   Expanded(
                     child: SizedBox(
-                      height: 46,
+                      height: 45,
                       child: TextFieldInput(
                         hintText: 'Search',
                         prefixIcon: Image.asset('assets/icon/search.png'),
