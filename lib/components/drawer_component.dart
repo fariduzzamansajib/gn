@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:garments_niyog/base/base.dart';
+import 'package:garments_niyog/helpers/global_helper.dart';
+import 'package:garments_niyog/helpers/route.dart';
 
 class DrawerComponent extends StatelessWidget {
   const DrawerComponent({
@@ -67,7 +70,10 @@ class DrawerComponent extends StatelessWidget {
             leading: const Icon(Icons.logout),
             title: const Text('Logout'),
             onTap: () {
-              Navigator.pop(context);
+              Global.confirmDialog(onConfirmed: () {
+                Base.loginController.logout();
+                back();
+              });
             },
           ),
         ],

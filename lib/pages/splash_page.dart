@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 
+import '../controller/config_controller.dart';
 import '../helpers/hex_color.dart';
 import '../helpers/route.dart';
 import 'main_page.dart';
@@ -17,8 +19,10 @@ class _SplashPageState extends State<SplashPage> {
   void initState() {
     _updateAppbar();
     Future.delayed(Duration(seconds: 3), () {
+      Get.put(ConfigController()).init();
+
       // Get.offAll(() => SignInScreen());
-      offAll(MainPage());
+      // offAll(MainPage());
     });
     super.initState();
   }

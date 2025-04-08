@@ -37,6 +37,10 @@ dependencies:
   get: ^4.6.6
   carousel_slider: ^5.0.0
   dotted_border: ^2.1.0
+  shared_preferences: 
+  dio: 
+  flutter_svg: 
+
 
 
 dev_dependencies:
