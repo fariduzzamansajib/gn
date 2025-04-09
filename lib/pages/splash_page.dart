@@ -4,8 +4,6 @@ import 'package:get/get.dart';
 
 import '../controller/config_controller.dart';
 import '../helpers/hex_color.dart';
-import '../helpers/route.dart';
-import 'main_page.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});

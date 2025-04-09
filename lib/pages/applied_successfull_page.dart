@@ -21,7 +21,7 @@ class AppliedSuccessfullPage extends StatelessWidget {
             ],
           ),
           SizedBox(
-            height: 20,
+            height: 21,
           ),
           Text(
             'Applied Successfully',
